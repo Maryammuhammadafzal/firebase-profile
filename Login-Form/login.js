@@ -2,18 +2,27 @@
 import { auth, signInWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail  } from "../firebase.js";
 
 
-let loginEmail = document.getElementById("login-email")
-let loginPassword = document.getElementById("login-password")
+// ------------------------------------DOM Elements------------------------------------//
 
+let email = document.getElementById("loginEmail")
+let password = document.getElementById("loginPassword")
+let body = document.querySelector('.body');
 let signinBtn = document.querySelector('.login-btn')
 let forgetPassword = document.getElementById('forgot-password')
 
+
+// -----------------------------login user -------------------------------------------//
 const loginUser = ()=> {
-    signInWithEmailAndPassword(auth, loginEmail.value, loginPassword.value)
+ 
+  // const loginEmail = email.value ;
+  // const loginPassword = password.value ;
+
+    signInWithEmailAndPassword(auth, email.value, password.value)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
     console.log(user);
+    //Successfully login 
     const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -30,8 +39,8 @@ const loginUser = ()=> {
         title: "Login successfully",
       });
     setTimeout (()=>{
-      location.href = "../Dashboard/profile.html"
-    },3000)
+      location.href = "../Dashboard/dashboard.html"
+    },2000)
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -46,34 +55,27 @@ const loginUser = ()=> {
         title: "Null",
         text: "Email is required",
       });
-
       break;
 
-        case 'auth/invalid-email':
-          //  if email is empty Email
+      //  if email is empty Email
+      case 'auth/invalid-email':
       Swal.fire({
         icon: "error",
         title: "Error",
         text: "Email is Incorrect",
       });
-
-
       email.classList += ' border-red';
-          
-          break;
+      break;
       
-          case 'auth/missing-password':
-            //  if email is empty Email
+      //  if email is empty Email
+      case 'auth/missing-password':
         Swal.fire({
           icon: "error",
           title: "Error",
           text: "Password is required",
         });
-
-
         password.classList += ' border-red';
-            
-            break;
+        break;
 
         default:
           console.log(errorCode);
@@ -90,8 +92,23 @@ const forgotPassword = ()=>{
 
   sendPasswordResetEmail(auth, loginEmail.value)
   .then(() => {
-    // Password reset email sent!
-    // ..
+    //Successfully Email sent
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      },
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Email has been Sent",
+    });
+
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -112,12 +129,15 @@ forgetPassword.addEventListener('click', forgotPassword)
 onAuthStateChanged(auth, (user) => {
   if (user) {
     
-    window.location.href = "../Dashboard/dashboard.html"
+    window.location.replace = "../Dashboard/dashboard.html"
 
    // const uid = user.uid;
     // ...
-  } //else {
-  //   // User is signed out
-  //   // ...
-  // }
+  } else {
+    body.classList.add("slide"); 
+    window.location.href = "../Signup-Form/index.html"
+    // User is signed out
+    // ...
+
+  }
 });

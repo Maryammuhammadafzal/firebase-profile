@@ -1,0 +1,244 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+.body{
+    background-color: rgb(15, 144, 225);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition-delay: 0.5s;
+}
+
+.slide{
+    background-color: rgb(239, 55, 73);
+
+}
+.container{
+    background-color: rgb(49, 50, 50);
+    width: 70%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0.4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+.signup , .gotosignup{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    z-index: 10;
+    position: relative;
+}
+
+.signup h1 ,.gotosignup h1{
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.signup button , .gotosignup button{
+    padding:  10px 20px;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+}
+
+.signup button:hover, .gotosignup button:hover{
+    top: 5px;
+}
+
+.formbox{
+    width: 37%;
+    position: absolute;
+    left: 15%;
+    height: 550px;
+    z-index: 1000;
+    background-color: #ffffff;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    overflow: hidden;
+    padding: 20px 5px;
+    
+}
+
+.formbox form h1 {
+    padding: 3px 8px ;
+}
+
+.slide .formbox{
+  left: 50%;
+}
+/* .formbox .form{
+    width: 90%;
+    height: 580px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.formbox .form{
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0%;
+    transition: 1s;
+}
+
+.formbox .form.document{
+  top: 100%;
+  transition-delay: 0.2s;
+ 
+}
+
+.slide .formbox .form.document{
+  top: 0%;
+  transition-delay: 0s;
+}
+
+.formbox .form.signupform{
+    top: 0%;
+  transition-delay: 0.2s;
+  }
+
+.slide .formbox .form.signupform{
+    top: -100%;
+    transition-delay: 0s;
+}  
+.document h1{
+    color: aquamarine;
+
+
+}
+.slide .formbox .document{
+    top: 0;
+}
+.formbox form input{
+    margin: 8px;
+    text-transform: uppercase;
+}
+
+.formbox form input[type="text"]{
+    width: 170px;
+    padding: 7px 3px;
+}
+
+.formbox form input[type="email"]{   
+    width: 365px;
+    padding: 7px 3px;
+}
+
+.formbox form input[type="password"]{
+    width: 365px;
+    padding: 7px 3px;
+    display: block;
+}
+.formbox form input[type="radio"]{
+    margin: 8px;
+}
+.formbox form input[type="date"]{
+    width: 365px;
+    padding: 7px 3px;
+    display: block;
+}
+.formbox form input[type="address"]{
+    width: 365px;
+    padding: 7px 3px;
+    display: block;
+}
+select{
+    padding: 7px 3px;
+    margin: 8px;
+    width: 365px;
+
+}
+
+textarea{
+    margin: 8px;
+    width: 365px;
+    padding: 7px 3px;
+    height: 80px;
+}
+
+.document{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.document h1 {
+    font-size: 2rem;
+    color: black;
+}
+.document input{
+    width: 50%;
+    height: 1.7rem;
+    padding: 1rem;
+    color:black;  
+}
+.document p{
+    width: 50%;
+    display: flex;
+    justify-content: start;
+}
+.document p a {
+    text-decoration: none;
+    color: #817d7d;
+    font-size: 0.9rem;
+}
+.document button{
+    width: 25%;
+    height: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #000;
+    font-size: 1rem;
+    background-color: rgb(239, 55, 73 , 0.7);
+    margin-bottom:2rem ;
+    
+}
+
+.social-login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.social-login button {
+    width: 20%;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.social-login i {
+    color: #fff;
+}

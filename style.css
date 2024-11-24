@@ -1,273 +1,135 @@
-/* Basic reset  */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
-.body{
-    background-color: rgb(15, 144, 225);
+
+.welcomeContainer{
+    background-color: #1d1c1c;
+    color: #eee;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    transition-delay: 0.5s;
+   
 }
 
-.slide{
-    background-color: rgb(239, 55, 73);
-
-}
-.container{
-    background-color: rgb(49, 50, 50);
-    width: 70%;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    opacity: 0.4;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-
-}
-
-.signup , .login{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* padding: 1rem; */
-    z-index: 10;
-    position: relative;
-}
-
-.signup h1 ,.login h1 , .form h1{
-    color: #000000;
-    font-size: 1.5em;
-}
-
-.signup button , .login button {
-    padding:  10px 20px;
-    margin: 15px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    border: none;
-}
-
-.signup button:hover, .login button:hover{
-    top: 5px;
-}
-
-.formbox{
-    width: 37%;
-    position: absolute;
-    left: 15%;
-    height: 550px;
-    z-index: 1000;
-    background-color: #ffffff;
-    display: flex ;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 1s;
-    overflow: hidden;
-    padding: 20px 5px;
-    
-}
-
-.formbox form h1 {
-    padding: 3px 8px ;
-}
-
-.slide .formbox{
-  left: 50%;
-}
-/* .formbox .form{
-    width: 90%;
-    height: 580px;
-    padding: 20px;
+#welcomePage{
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
-.formbox .form{
-    width: 90%;
-    height: 100%;
-    padding: 20px;
-    position: absolute;
-    top: 0%;
-    transition: 1s;
 }
 
-.formbox .loginForm{
-  top: 100%;
-  transition-delay: 0.2s;
- 
-}
-
-.slide .formbox .login{
-  top: 0%;
-  transition-delay: 0s;
-}
-
-.formbox .form.signupform{
-    top: 0%;
-  transition-delay: 0.2s;
-  }
-
-.slide .formbox .signupform{
-    top: -100%;
-    transition-delay: 0s;
-}  
-.loginForm h1{
-    color: rgb(9, 9, 9);
-}
-
-.loginForm {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1em;
-    gap: 1rem;
-
-}
-
-.loginForm input {
-    width: 60%;
-    height: 20px;
+.welcomeHeader{
+    font-size: 40px;
+    width: 100%;
+    height: 20vh;
     padding: 1rem;
-}
-
-.login-btn{
-    padding:  10px 20px;
-    margin: 15px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    border: none;
-    color: white;
-    background-color: rgb(231, 72, 72);
-}
-.slide .formbox .loginForm{
-    top: 0;
-}
-
-.formbox form input :not(input[type="email"]){
-    text-transform: uppercase;
-}
-.formbox form input {
-    margin: 8px;
-}
-
-.formbox form input[type="text"]{
-    width: 170px;
-    padding: 7px 3px;
-}
-
-.formbox form input[type="email"]{   
-    width: 365px;
-    padding: 7px 3px;
-}
-
-.formbox form input[type="password"]{
-    width: 365px;
-    padding: 7px 3px;
-    display: block;
-}
-.formbox form input[type="radio"]{
-    margin: 8px;
-}
-.formbox form input[type="date"]{
-    width: 365px;
-    padding: 7px 3px;
-    display: block;
-}
-.formbox form input[type="address"]{
-    width: 365px;
-    padding: 7px 3px;
-    display: block;
-}
-select{
-    padding: 7px 3px;
-    margin: 8px;
-    width: 365px;
-
-}
-
-textarea{
-    margin: 8px;
-    width: 365px;
-    padding: 7px 3px;
-    height: 80px;
-}
-
-.border-red{
-    border: 1px solid rgb(234, 71, 71);
-    background-color: rgb(252, 178, 178);
-}
-
-.three { width: 100%; }
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-
-.col:first-of-type {
-  margin-left: 0;
-}
-.three{
     background-color: #eee;
-    padding: 50px 0;
-  }
-  .loader{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    position: relative;
-    margin: 0 auto;
-  }
-  
-  
-/* LOADER 4 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#welcomeLogo{
+    margin-left: 2rem;
+}
+#welcomeLoginButton{
+    padding: 1rem;
+    width: 12%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
 
-#loader-4 span{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background-color: #3498db;
-    margin: 35px 5px;
-    opacity: 0;
-  }
-  
-  #loader-4 span:nth-child(1){
-    animation: opacitychange 1s ease-in-out infinite;
-  }
-  
-  #loader-4 span:nth-child(2){
-    animation: opacitychange 1s ease-in-out 0.33s infinite;
-  }
-  
-  #loader-4 span:nth-child(3){
-    animation: opacitychange 1s ease-in-out 0.66s infinite;
-  }
-  
-  @keyframes opacitychange{
-    0%, 100%{
-      opacity: 0;
-    }
-  
-    60%{
-      opacity: 1;
-    }
-  }
+#siginBtn{
+    width: 100%;
+    height: 3rem;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #eee;
+    background-color: #5833f1;
+    border: none;
+    padding: 0.5rem;
+}
+
+
+.welcomeHero{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    background-image: url(./images/background-images/background-image.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.welcomeHero::after{
+    content: "";
+    width: 100%;
+    height: 80%;
+    opacity: 0.4;
+    background-color: #1d1c1c;
+    position: absolute; 
+    z-index: 1; 
+}
+
+#welcomeContent{
+    width: 56%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 3rem;
+    z-index: 2;
+}
+
+#welcomeHeading{
+    font-size: 2.5rem;
+    text-align: center;
+}
+#welcomeText{
+    width: 100%;
+}
+#welcomeText p{
+    font-size: 1.7rem;
+    word-spacing: 0.3rem;
+    text-align: center;
+}
+
+#welcomeStartedButton{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcomeStartedButton button{
+    width: 20%;
+    height: 3rem;
+    font-size: 1rem;
+}
+
+#tryBtn{
+    background-color: #efe9e9;
+    color: #1d1c1c;
+    border: none;
+}
+#tryBtn:hover{
+    background-color: #b9b6b6;
+    color: #1d1c1c;
+}
+#startBtn{
+    border: 1px solid #efe9e9;
+    color: #efe9e9;
+    background-color: transparent;
+}

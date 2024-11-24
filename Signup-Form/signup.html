@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./signup.css" />
+    <!-- sweet alert library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css"
+    />
+    <!-- Font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="body">
+      <div class="container">
+        <div class="gotosignup">
+          <h1>Form Data</h1>
+          <button class="back-btn">Back to signup</button>
+        </div>
+        <div class="signup">
+          <h1>Create An Account</h1>
+          <button class="signup-btn">Register</button>
+        </div>
+      </div>
+      <div class="formbox slide">
+        <form action="app.js" class="form signupform">
+          <h1>SignUp</h1>
+          <input value="" type="text" id="firstname" placeholder="firstname" />
+          <input value="" type="text" id="lastname" placeholder="lastname" />
+          <input
+            value=""
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email"
+          />
+          <input
+            value=""
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+          />
+          <input
+            value=""
+            type="radio"
+            name="gender"
+            id="gendermale"
+            value=""
+          />Male
+          <input
+            value=""
+            type="radio"
+            name="gender"
+            id="genderfemale"
+            value=""
+          />Female
+          <input value="" type="date" name="date" id="birth-date" />
+          <select name="country" id="country" value="">
+            <option value="choose country" selected>Choose Country</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="India">India</option>
+            <option value="Turkey">Turkey</option>
+          </select>
+          <select name="city" id="city" value="">
+            <option value="choose country" selected>Choose City</option>
+            <option value="Karachi">Karachi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Istambul">Istambul</option>
+          </select>
+          <input
+            value=""
+            type="address"
+            name="address"
+            id="address"
+            placeholder="address"
+          />
+          <textarea
+            name="feedback"
+            id="feedback"
+            placeholder="Write Comment"
+            value=""
+          ></textarea>
+        </form>
+
+        <div class="document form">
+          <h1>Login</h1>
+          <input
+            value=""
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email"
+          />
+          <input
+            value=""
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+          />
+          <p><a href="" id="forgetPass">Forget password!</a></p>
+          <button id="loginButton">Login</button>
+
+          <h3>Login with</h3>
+          <div class="social-login">
+            <button id="googleButton">
+              <i class="fa-brands fa-google"></i>
+            </button>
+            <button id="facebookButton">
+              <i class="fa-brands fa-facebook-f"></i>
+            </button>
+            <button id="twitterButton">
+              <i class="fa-brands fa-twitter"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./signup.js"></script>
+    <script type="module" src="../firebase.js"></script>
+
+    <!-- sweet alert library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>
