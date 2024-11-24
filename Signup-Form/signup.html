@@ -23,12 +23,12 @@
     <div class="body">
       <div class="container">
         <div class="gotosignup">
-          <h1>Form Data</h1>
-          <button class="back-btn">Back to signup</button>
+          <h1>Register Here</h1>
+          <button class="back-btn" id="gotoSignup">Go to signup</button>
         </div>
         <div class="signup">
-          <h1>Create An Account</h1>
-          <button class="signup-btn">Register</button>
+          <h1>Login Here</h1>
+          <button class="signup-btn" id="gotoLogin">Go to Login</button>
         </div>
       </div>
       <div class="formbox slide">
@@ -40,14 +40,14 @@
             value=""
             type="email"
             name="email"
-            id="email"
+            id="signupEmail"
             placeholder="email"
           />
           <input
             value=""
             type="password"
             name="password"
-            id="password"
+            id="sinupPassword"
             placeholder="password"
           />
           <input
@@ -64,6 +64,13 @@
             id="genderfemale"
             value=""
           />Female
+          <input
+            value=""
+            type="radio"
+            name="gender"
+            id="genderother"
+            value=""
+          />Other
           <input value="" type="date" name="date" id="birth-date" />
           <select name="country" id="country" value="">
             <option value="choose country" selected>Choose Country</option>
@@ -84,12 +91,12 @@
             id="address"
             placeholder="address"
           />
-          <textarea
-            name="feedback"
-            id="feedback"
-            placeholder="Write Comment"
-            value=""
-          ></textarea>
+          <div class="form-btn">
+            <button id="SignupButton">Signup</button>
+
+          </div>
+          
+          
         </form>
 
         <div class="document form">
@@ -98,14 +105,14 @@
             value=""
             type="email"
             name="email"
-            id="email"
+            id="loginEmail"
             placeholder="email"
           />
           <input
             value=""
             type="password"
             name="password"
-            id="password"
+            id="loginPassword"
             placeholder="password"
           />
           <p><a href="" id="forgetPass">Forget password!</a></p>
