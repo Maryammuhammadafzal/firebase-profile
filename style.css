@@ -7,6 +7,9 @@
     font-weight: 400;
     font-style: normal;
 }
+button{
+    cursor: pointer;
+}
 
 .welcomeContainer{
     background-color: #1d1c1c;
@@ -56,6 +59,11 @@
     background-color: #5833f1;
     border: none;
     padding: 0.5rem;
+}
+
+#siginBtn:hover{
+    color: #eee;
+    background-color: #543cb5;
 }
 
 
@@ -132,4 +140,9 @@
     border: 1px solid #efe9e9;
     color: #efe9e9;
     background-color: transparent;
+}
+
+#startBtn:hover{
+    background-color: #efe9e9;
+    color: #1d1c1c;
 }

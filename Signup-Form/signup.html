@@ -32,67 +32,61 @@
         </div>
       </div>
       <div class="formbox slide">
-        <form action="app.js" class="form signupform">
+        <form class="form signupform" id="signupform">
           <h1>SignUp</h1>
-          <input value="" type="text" id="firstname" placeholder="firstname" />
-          <input value="" type="text" id="lastname" placeholder="lastname" />
+          <input type="text" id="firstname" placeholder="firstname" />
+          <input type="text" id="lastname" placeholder="lastname" />
           <input
-            value=""
             type="email"
             name="email"
             id="signupEmail"
             placeholder="email"
           />
           <input
-            value=""
             type="password"
             name="password"
             id="sinupPassword"
             placeholder="password"
           />
           <input
-            value=""
             type="radio"
             name="gender"
             id="gendermale"
-            value=""
+            value="male"
           />Male
           <input
-            value=""
             type="radio"
             name="gender"
             id="genderfemale"
-            value=""
+            value="female"
           />Female
           <input
-            value=""
             type="radio"
             name="gender"
             id="genderother"
-            value=""
+            value="other"
           />Other
-          <input value="" type="date" name="date" id="birth-date" />
-          <select name="country" id="country" value="">
+          <input type="date" name="date" id="birthDate" />
+          <select name="country" id="country">
             <option value="choose country" selected>Choose Country</option>
             <option value="Pakistan">Pakistan</option>
             <option value="India">India</option>
             <option value="Turkey">Turkey</option>
           </select>
-          <select name="city" id="city" value="">
+          <select name="city" id="city">
             <option value="choose country" selected>Choose City</option>
             <option value="Karachi">Karachi</option>
             <option value="Mumbai">Mumbai</option>
             <option value="Istambul">Istambul</option>
           </select>
           <input
-            value=""
             type="address"
             name="address"
-            id="address"
+            id="signupAddress"
             placeholder="address"
           />
           <div class="form-btn">
-            <button id="SignupButton">Signup</button>
+            <button id="signupButton">Signup</button>
 
           </div>
           
@@ -102,14 +96,12 @@
         <div class="document form">
           <h1>Login</h1>
           <input
-            value=""
             type="email"
             name="email"
             id="loginEmail"
             placeholder="email"
           />
           <input
-            value=""
             type="password"
             name="password"
             id="loginPassword"
@@ -134,10 +126,10 @@
       </div>
     </div>
 
-    <script type="module" src="./signup.js"></script>
-    <script type="module" src="../firebase.js"></script>
-
+    
     <!-- sweet alert library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.all.min.js"></script>
+    <script type="module" src="./signup.js"></script>
+    <script type="module" src="../firebase.js"></script>
   </body>
 </html>

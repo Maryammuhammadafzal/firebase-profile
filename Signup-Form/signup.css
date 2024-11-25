@@ -179,7 +179,7 @@ select{
     align-items: center;
     justify-content: center;
 }
-#SignupButton{
+#signupButton{
     width: 25%;
     height: 2.5rem;
     padding: 1rem;
